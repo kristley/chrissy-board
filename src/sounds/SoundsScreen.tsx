@@ -38,7 +38,8 @@ export function SoundsScreen() {
         return typeof item === 'boolean' ? <View  style={{ flex: 1, margin: 10, height: 200}}/> : 
         <SoundButton soundObject={item} />
       }}
-      columnWrapperStyle={{ paddingHorizontal: 10, justifyContent: 'space-between' }}
+      columnWrapperStyle={{ paddingHorizontal: 10, justifyContent: 'space-between'}}
+      style={{backgroundColor: '#948FD3' }}
     />
   );
 }

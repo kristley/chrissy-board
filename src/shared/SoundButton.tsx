@@ -22,7 +22,7 @@ export default function SoundButton({ soundObject }: SoundButtonProps) {
   return (
     <TouchableOpacity onPress={playSound} style={styles.button} onLongPress={addToFavorites}>
       <Image source={soundObject.image} style={styles.image}/>
-      <Text>Play Sound</Text>
+      <Text style={styles.text}>{soundObject.name}</Text>
     </TouchableOpacity>
   );
 }
@@ -30,21 +30,20 @@ const styles = StyleSheet.create({
   button: { 
     flex: 1,
     margin: 10, 
-    backgroundColor: 'lavender', 
+    backgroundColor: '#C4C0F2', 
     height: 200, 
     borderRadius: 20 
   },
   image: {
     flex: 1,
-    marginBottom: 25,
+    marginBottom: 10,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
   },
   text: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
-    color: 'black',
-    textAlign: 'center',
-    margin: 10
+    marginLeft: 15,
+    marginVertical: 10
   }
 });
