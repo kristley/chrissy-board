@@ -14,13 +14,9 @@ export default function SoundButton({ soundObject }: SoundButtonProps) {
     console.log('Playing Sound');
     await sound.playAsync();
   }
-  function addToFavorites() {
-    // a function to add the sound to a favorites list that is stored in local storage
-      
-  }
 
   return (
-    <TouchableOpacity onPress={playSound} style={styles.button} onLongPress={addToFavorites}>
+    <TouchableOpacity onPress={playSound} style={styles.button}>
       <Image source={soundObject.image} style={styles.image}/>
       <Text style={styles.text}>{soundObject.name}</Text>
     </TouchableOpacity>
@@ -36,6 +32,7 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
+    width: '100%',
     marginBottom: 10,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
